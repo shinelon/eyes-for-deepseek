@@ -6,6 +6,10 @@
 *.webp
 *.bmp
 
+# Local config files (not tracked)
+AGENTS.md
+opencode.json
+
 # Node
 node_modules/
 dist/
