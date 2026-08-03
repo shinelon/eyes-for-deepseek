@@ -63,7 +63,7 @@ src/
 
 ## 备注
 
-- `max_tokens` 默认 2000（商汤官方推荐；该模型为推理模型，max_tokens 含 reasoning，故需比纯文本模型大）。
+- `max_tokens` 默认 4096（该模型为推理模型，max_tokens 含 reasoning，故需比纯文本模型大；空响应通常是 token 耗尽，代码已加 fallback 提示）。
 - 支持图片格式：jpg / jpeg / png；建议长边 ≤2048px 节省 tokens。
 - 多图输入（`ui_diff_check`）由 sensenova 官方文档 7.5 节支持。
 - API 文档：https://github.com/OpenSenseNova/SenseNova6.7/blob/main/API_CN.md
