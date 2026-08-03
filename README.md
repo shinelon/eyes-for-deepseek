@@ -69,7 +69,7 @@ DeepSeek 很强，但它**看不见图片**：截图、图表、UI 设计稿、�
 ### 2. 构建服务
 
 ```bash
-git clone https://github.com/<your-name>/eyes-for-deepseek.git
+git clone https://github.com/shinelon/eyes-for-deepseek.git
 cd eyes-for-deepseek/sensenova-vision-mcp
 npm install
 npm run build
