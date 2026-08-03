@@ -77,14 +77,14 @@ npm run build
 
 ### 3. 接入 MCP 客户端
 
-以 [opencode](https://opencode.ai) 为例，在项目根目录 `opencode.json` 配置：
+以 [opencode](https://opencode.ai) 为例，在工作目录的 `opencode.json` 中配置：
 
 ```json
 {
   "mcp": {
     "sensenova-vision": {
       "type": "local",
-      "command": ["node", "./sensenova-vision-mcp/dist/index.js"],
+      "command": ["node", "<dist/index.js 的路径>"],
       "environment": {
         "SENSENOVA_API_KEY": "{env:SENSENOVA_API_KEY}"
       },
@@ -94,9 +94,30 @@ npm run build
 }
 ```
 
-> 任何支持 MCP 的客户端（Claude Desktop、Cursor 等）均可按相同方式接入。
+**`command` 中的路径指向构建产物 `dist/index.js`，按使用场景填写（路径相对于 `opencode.json` 所在目录解析）：**
 
-设置环境变量 `SENSENOVA_API_KEY` 后启动客户端，DeepSeek 即可调用这些视觉工具。
+| 场景 | 路径写法 |
+|------|---------|
+| 在本仓库内自测（`opencode.json` 放仓库根） | `./sensenova-vision-mcp/dist/index.js` |
+| 在任意其他项目接入（推荐，最稳妥） | 用绝对路径，如 `D:/path/to/eyes-for-deepseek/sensenova-vision-mcp/dist/index.js` |
+
+> 拿不准就用绝对路径，可避免相对路径解析问题。
+
+**环境变量：**
+
+- `{env:SENSENOVA_API_KEY}` 是 opencode 的插值语法——运行时从进程环境读取 `SENSENOVA_API_KEY`，需先在系统中设置该变量：
+
+```bash
+# Linux / macOS / Git Bash（当前会话）
+export SENSENOVA_API_KEY=你的key
+
+# Windows PowerShell（永久）
+setx SENSENOVA_API_KEY "你的key"
+```
+
+- 其他 MCP 客户端（Claude Desktop、Cursor 等）**不支持** `{env:...}` 语法，请在配置中直接填入 API Key 值；配置文件名与结构也略有差异，参考各客户端文档。
+
+设置完成后启动客户端，DeepSeek 即可调用这些视觉工具。
 
 ### 环境变量
 
