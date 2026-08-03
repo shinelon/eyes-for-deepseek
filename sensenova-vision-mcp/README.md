@@ -38,7 +38,7 @@ npm run build
   "mcp": {
     "sensenova-vision": {
       "type": "local",
-      "command": ["node", "D:/opencode_space/local_mcp/sensenova-vision-mcp/dist/index.js"],
+      "command": ["node", "./dist/index.js"],
       "environment": {
         "SENSENOVA_API_KEY": "{env:SENSENOVA_API_KEY}",
         "SENSENOVA_BASE_URL": "https://token.sensenova.cn/v1"
