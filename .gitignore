@@ -1,0 +1,13 @@
+# Image files (test assets, not tracked)
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.bmp
+
+# Node
+node_modules/
+dist/
+*.log
+.env
