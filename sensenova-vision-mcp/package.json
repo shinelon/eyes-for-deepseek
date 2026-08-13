@@ -1,7 +1,7 @@
 {
   "name": "sensenova-vision-mcp",
   "version": "0.1.0",
-  "description": "SenseNova 6.7 Flash-Lite vision MCP server — image analysis powered by SenseTime's native multimodal model",
+  "description": "SenseNova 6.8 Flash-Lite vision MCP server — image analysis powered by SenseTime's native multimodal model",
   "type": "module",
   "main": "dist/index.js",
   "bin": {

@@ -1,6 +1,6 @@
 # sensenova-vision-mcp
 
-基于商汤 **SenseNova 6.7 Flash-Lite**（原生多模态智能体模型）的 MCP server，提供图像识别能力。配置驱动结构，工具集与 zai-mcp-server 对齐（除视频分析）。支持单图与多图输入。
+基于商汤 **SenseNova 6.8 Flash-Lite**（原生多模态智能体模型）的 MCP server，提供图像识别能力。配置驱动结构，工具集与 zai-mcp-server 对齐（除视频分析）。支持单图与多图输入。
 
 ## 工具（7 个）
 
@@ -66,4 +66,4 @@ src/
 - `max_tokens` 默认 4096（该模型为推理模型，max_tokens 含 reasoning，故需比纯文本模型大；空响应通常是 token 耗尽，代码已加 fallback 提示）。
 - 支持图片格式：jpg / jpeg / png；建议长边 ≤2048px 节省 tokens。
 - 多图输入（`ui_diff_check`）由 sensenova 官方文档 7.5 节支持。
-- API 文档：https://github.com/OpenSenseNova/SenseNova6.7/blob/main/API_CN.md
+- API 文档：https://github.com/OpenSenseNova/SenseNova6.8/blob/main/API_CN.md

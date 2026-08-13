@@ -6,7 +6,7 @@
 
 DeepSeek 很强，但它**看不见图片**：截图、图表、UI 设计稿、错误信息、文档扫描件——统统无法理解。`eyes-for-deepseek` 通过 [MCP（Model Context Protocol）](https://modelcontextprotocol.io) 为 DeepSeek 接入一组视觉工具，让它能"看图说话"。
 
-视觉能力由商汤 **SenseNova 6.7 Flash-Lite**（原生多模态智能体模型）提供，**注册即享免费额度**，零成本起步；工具代码 MIT 开源。
+视觉能力由商汤 **SenseNova 6.8 Flash-Lite**（原生多模态智能体模型）提供，**注册即享免费额度**，零成本起步；工具代码 MIT 开源。
 
 ---
 
@@ -25,7 +25,7 @@ DeepSeek 很强，但它**看不见图片**：截图、图表、UI 设计稿、�
 一个**配置驱动的 MCP 视觉工具集**，专为 DeepSeek 设计，架构上同样适用于任何纯文本 LLM。
 
 - **7 个视觉工具**：通用识图、OCR、UI 转代码、错误诊断、图表理解、数据可视化分析、双图对比
-- **视觉后端**：商汤 SenseNova 6.7 Flash-Lite（原生多模态，"看、想、做"一体化）
+- **视觉后端**：商汤 SenseNova 6.8 Flash-Lite（原生多模态，"看、想、做"一体化）
 - **配置驱动**：所有工具共享一个推理内核，新增工具只需加一个配置对象
 - **可扩展**：当前后端为 SenseNova，架构预留接入其他视觉模型的空间
 
@@ -36,7 +36,7 @@ DeepSeek 很强，但它**看不见图片**：截图、图表、UI 设计稿、�
 视觉能力基于商汤 **SenseNova Token Plan 免费公测**：
 
 - **注册即领**，无门槛
-- `sensenova-6.7-flash-lite`：**每 5 小时 1500 次**免费调用
+- `sensenova-6.8-flash-lite`：**每 5 小时 1500 次**免费调用
 - OpenAI 兼容 API，接入简单
 - 领取地址：https://platform.sensenova.cn/console
 
@@ -125,7 +125,7 @@ setx SENSENOVA_API_KEY "你的key"
 |------|:---:|------|------|
 | `SENSENOVA_API_KEY` | 是 | — | 商汤 API Key（未设置则调用时抛错） |
 | `SENSENOVA_BASE_URL` | 否 | `https://token.sensenova.cn/v1` | OpenAI 兼容端点 |
-| `SENSENOVA_MODEL` | 否 | `sensenova-6.7-flash-lite` | 视觉模型 |
+| `SENSENOVA_MODEL` | 否 | `sensenova-6.8-flash-lite` | 视觉模型 |
 
 ---
 
