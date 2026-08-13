@@ -1,6 +1,6 @@
 import OpenAI from "openai";
 
-const MODEL = process.env.SENSENOVA_MODEL ?? "sensenova-6.7-flash-lite";
+const MODEL = process.env.SENSENOVA_MODEL ?? "sensenova-6.8-flash-lite";
 const BASE_URL = process.env.SENSENOVA_BASE_URL ?? "https://token.sensenova.cn/v1";
 
 let _client: OpenAI | null = null;

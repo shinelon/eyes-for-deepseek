@@ -22,7 +22,7 @@
 |------|:---:|------|------|
 | `SENSENOVA_API_KEY` | 是 | — | 商汤 API Key |
 | `SENSENOVA_BASE_URL` | 否 | `https://token.sensenova.cn/v1` | OpenAI 兼容端点 |
-| `SENSENOVA_MODEL` | 否 | `sensenova-6.7-flash-lite` | 视觉模型 |
+| `SENSENOVA_MODEL` | 否 | `sensenova-6.8-flash-lite` | 视觉模型 |
 
 ## 构建
 
